@@ -1,97 +1,200 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native Authentication App
 
-# Getting Started
+A complete React Native authentication application built with TypeScript, featuring login, signup, and home screens using React Context API for state management.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 🚀 Features
 
-## Step 1: Start Metro
+### Core Authentication Features
+- **User Login**: Email and password authentication with validation
+- **User Signup**: New user registration with form validation
+- **User Logout**: Secure logout functionality with confirmation
+- **Persistent Authentication**: Users remain logged in after app restart using AsyncStorage
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+### UI/UX Features
+- **Modern Design**: Clean, intuitive interface with consistent styling
+- **Form Validation**: Real-time validation with error messages
+- **Password Visibility Toggle**: Eye icon to show/hide password
+- **Loading States**: Visual feedback during authentication operations
+- **Responsive Layout**: Works on different screen sizes
+- **Keyboard Handling**: Proper keyboard avoidance and scrolling
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+### Technical Features
+- **TypeScript**: Full type safety throughout the application
+- **React Context API**: Global state management for authentication
+- **React Navigation**: Seamless navigation between screens
+- **AsyncStorage**: Persistent authentication state
+- **Custom Components**: Reusable input and button components
 
-```sh
-# Using npm
-npm start
 
-# OR using Yarn
-yarn start
+### Login Screen
+- Email and password input fields
+- Form validation with error messages
+- Demo credentials display
+- Navigation to signup screen
+
+### Signup Screen
+- Name, email, and password fields
+- Comprehensive form validation
+- Password strength requirements
+- Navigation back to login
+
+### Home Screen
+- User information display (name, email, ID)
+- Logout functionality with confirmation
+- Clean card-based layout
+
+## 🛠️ Setup Instructions
+
+### Prerequisites
+- Node.js (>= 18)
+- React Native CLI
+- iOS Simulator (for iOS development)
+- Android Studio (for Android development)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd demo
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Install iOS dependencies** (iOS only)
+   ```bash
+   cd ios && pod install && cd ..
+   ```
+
+4. **Start the Metro bundler**
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
+
+5. **Run the app**
+
+   **For iOS:**
+   ```bash
+   npm run ios
+   # or
+   yarn ios
+   ```
+
+   **For Android:**
+   ```bash
+   npm run android
+   # or
+   yarn android
+   ```
+
+## 🧪 Demo Credentials
+
+The app includes pre-configured demo users for testing:
+
+### User 1
+- **Email**: john@example.com
+- **Password**: password123
+
+### User 2
+- **Email**: jane@example.com
+- **Password**: password456
+
+## 📁 Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+│   ├── CustomInput.tsx  # Input component with validation
+│   └── CustomButton.tsx # Button component with variants
+├── contexts/           # React Context providers
+│   └── AuthContext.tsx # Authentication state management
+├── navigation/         # Navigation setup
+│   └── AppNavigator.tsx # Main navigation configuration
+├── screens/           # App screens
+│   ├── LoginScreen.tsx # Login screen
+│   ├── SignupScreen.tsx # Signup screen
+│   └── HomeScreen.tsx  # Home screen
+└── types/             # TypeScript type definitions
+    └── index.ts       # Shared types and interfaces
 ```
 
-## Step 2: Build and run your app
+## 🔧 Key Components
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+### AuthContext
+- Manages global authentication state
+- Provides login, signup, and logout functions
+- Handles AsyncStorage persistence
+- Includes loading states
 
-### Android
+### CustomInput
+- Reusable input component
+- Built-in validation display
+- Password visibility toggle
+- Error state handling
 
-```sh
-# Using npm
-npm run android
+### CustomButton
+- Multiple variants (primary/secondary)
+- Loading state support
+- Disabled state handling
+- Consistent styling
 
-# OR using Yarn
-yarn android
-```
+## 🎯 Implementation Details
 
-### iOS
+### Authentication Flow
+1. **App Launch**: Checks AsyncStorage for existing user session
+2. **Login**: Validates credentials against mock database
+3. **Signup**: Creates new user account with validation
+4. **Logout**: Clears user data and redirects to login
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+### State Management
+- Uses React Context API for global state
+- AsyncStorage for persistence
+- Loading states for better UX
+- Error handling throughout
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+### Navigation
+- Stack navigation for screen transitions
+- Conditional rendering based on auth state
+- No headers for cleaner UI
+- Proper back navigation handling
 
-```sh
-bundle install
-```
+## 🚀 Bonus Features Implemented
 
-Then, and every time you update your native dependencies, run:
+- ✅ **Password Visibility Toggle**: Eye icon to show/hide password
+- ✅ **Form Validation**: Comprehensive client-side validation
+- ✅ **Loading States**: Visual feedback during operations
+- ✅ **Error Handling**: User-friendly error messages
+- ✅ **Persistent Authentication**: Users stay logged in
+- ✅ **Modern UI**: Clean, professional design
 
-```sh
-bundle exec pod install
-```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
 
-```sh
-# Using npm
-npm run ios
+## 📝 Available Scripts
 
-# OR using Yarn
-yarn ios
-```
+- `npm start` - Start Metro bundler
+- `npm run ios` - Run on iOS simulator
+- `npm run android` - Run on Android emulator
+- `npm test` - Run tests
+- `npm run lint` - Run ESLint
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
 
-## Step 3: Modify your app
+## 📄 License
 
-Now that you have successfully run the app, let's make changes!
+This project is licensed under the MIT License.
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## 👨‍💻 Author 
+M Imran Shad
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Created as a React Native authentication demo showcasing:
+- React Context API for state management
+- TypeScript implementation
+- Modern UI/UX practices
+- Complete authentication flow
