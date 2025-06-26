@@ -2,7 +2,7 @@
 
 A complete React Native authentication application built with TypeScript, featuring login, signup, and home screens using React Context API for state management.
 
-## 🚀 Features
+## Features
 
 ### Core Authentication Features
 - **User Login**: Email and password authentication with validation
@@ -94,16 +94,16 @@ A complete React Native authentication application built with TypeScript, featur
    yarn android
    ```
 
-## 🧪 Demo Credentials
+##  Demo Credentials
 
 The app includes pre-configured demo users for testing:
 
 ### User 1
-- **Email**: john@example.com
+- **Email**: imran@example.com
 - **Password**: password123
 
 ### User 2
-- **Email**: jane@example.com
+- **Email**: zainab@example.com
 - **Password**: password456
 
 ## 📁 Project Structure
@@ -145,7 +145,7 @@ src/
 - Disabled state handling
 - Consistent styling
 
-## 🎯 Implementation Details
+## Implementation Details
 
 ### Authentication Flow
 1. **App Launch**: Checks AsyncStorage for existing user session
@@ -165,18 +165,18 @@ src/
 - No headers for cleaner UI
 - Proper back navigation handling
 
-## 🚀 Bonus Features Implemented
+## Bonus Features Implemented
 
-- ✅ **Password Visibility Toggle**: Eye icon to show/hide password
-- ✅ **Form Validation**: Comprehensive client-side validation
-- ✅ **Loading States**: Visual feedback during operations
-- ✅ **Error Handling**: User-friendly error messages
-- ✅ **Persistent Authentication**: Users stay logged in
-- ✅ **Modern UI**: Clean, professional design
+- **Password Visibility Toggle**: Eye icon to show/hide password
+- **Form Validation**: Comprehensive client-side validation
+- **Loading States**: Visual feedback during operations
+- **Error Handling**: User-friendly error messages
+- **Persistent Authentication**: Users stay logged in
+- **Modern UI**: Clean, professional design
 
 
 
-## 📝 Available Scripts
+## Available Scripts
 
 - `npm start` - Start Metro bundler
 - `npm run ios` - Run on iOS simulator
@@ -186,11 +186,11 @@ src/
 
 
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License.
 
-## 👨‍💻 Author 
+## Author 
 M Imran Shad
 
 Created as a React Native authentication demo showcasing:
